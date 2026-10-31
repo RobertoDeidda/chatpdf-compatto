@@ -1,0 +1,16 @@
+{
+  "name": "chatpdf-compatto-checks",
+  "private": true,
+  "scripts": {
+    "test": "node tests/context-menu.cjs && node tests/buttons.cjs && node tests/export.cjs",
+    "test:buttons": "node tests/buttons.cjs",
+    "test:export": "node tests/export.cjs",
+    "bundle:math": "node scripts/bundle-katex.cjs node_modules/katex",
+    "package": "node scripts/package.cjs"
+  },
+  "devDependencies": {
+    "katex": "0.16.25",
+    "playwright": "1.62.1",
+    "jszip": "3.10.1"
+  }
+}

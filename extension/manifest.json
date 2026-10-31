@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "ChatPDF Compatto",
+  "version": "0.9.0",
+  "description": "Esporta una risposta o il testo selezionato di ChatGPT in PDF A4 verticale, con impaginazione compatta.",
+  "permissions": ["storage", "contextMenus"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+      "js": ["vendor/katex-assets.js", "print.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
